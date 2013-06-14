@@ -1,0 +1,6 @@
+{
+    "name": "anothertestaccount/phpwebsocketbasic",
+    "require": {
+        "php": ">=5.3.0"
+    }
+}
