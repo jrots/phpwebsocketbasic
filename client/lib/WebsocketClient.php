@@ -25,7 +25,9 @@ class WebsocketClient
 
 	public function __destruct()
 	{
-		$this->disconnect();
+		if($this->_Socket) {
+			$this->disconnect();
+		}
 	}
 
 	public function sendData($data, $type = 'text', $masked = true)
