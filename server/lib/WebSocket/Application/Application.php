@@ -66,4 +66,21 @@ abstract class Application
 		
 		return json_encode($payload);
 	}
+
+    /**
+    * hint
+    *
+    * hint clients about change
+    *
+    * @param array clients
+    * @param string message json message
+    *
+    * @return mixed
+    */
+    public function hint($clients, $message)
+    {
+        foreach($clients as $sendto) {
+            $sendto->send($message);
+        }
+    }
 }
